@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Amazon ML Sync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">Amazon ML Sync</div>
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="/scraping">Scraping</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

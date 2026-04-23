@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: #111827;
+    color: white;
+    padding: 24px 18px;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.sidebar nav a:hover {
+    background: #1f2937;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.06);
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    flex: 1;
+    min-width: 400px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+}
+
+.btn, button {
+    background: #111827;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn.secondary {
+    background: #374151;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid #eee;
+    padding: 12px 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    font-size: 14px;
+    color: #555;
+}
+
+.product-img {
+    width: 80px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.url {
+    max-width: 280px;
+    word-break: break-all;
+}

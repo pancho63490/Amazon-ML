@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Scraping</h1>
+
+<div class="card">
+    <form method="post" action="/add" class="form-row">
+        <input type="text" name="amazon_url" placeholder="Pega aquí el link de Amazon" required>
+        <button type="submit">Guardar link</button>
+        <a class="btn secondary" href="/scrape-all">Scrapear todos</a>
+    </form>
+</div>
+
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Imagen</th>
+                <th>Título</th>
+                <th>Precio</th>
+                <th>Status</th>
+                <th>Checked At</th>
+                <th>Amazon URL</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in products %}
+            <tr>
+                <td>{{ p[0] }}</td>
+                <td>
+                    {% if p[6] %}
+                        <img class="product-img" src="{{ p[6] }}" alt="img">
+                    {% endif %}
+                </td>
+                <td>{{ p[2] or '' }}</td>
+                <td>{{ p[3] or '' }}</td>
+                <td><span class="badge">{{ p[4] or '' }}</span></td>
+                <td>{{ p[5] or '' }}</td>
+                <td class="url">{{ p[1] }}</td>
+                <td>
+                    <a class="btn" href="/scrape/{{ p[0] }}">Scrapear</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
